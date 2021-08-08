@@ -132,7 +132,7 @@ app.delete("/user/delete/type/:userType", async (req, res) => {
   
   });
 
-app.listen(4000, () => 
+app.listen(process.env.PORT, () => 
   connectDB()
     .then((data) => console.log("server is running"))
     .catch((error) => console.log(error))
